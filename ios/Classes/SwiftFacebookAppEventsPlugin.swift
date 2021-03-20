@@ -24,8 +24,13 @@ public class SwiftFacebookAppEventsPlugin: NSObject, FlutterPlugin {
             handleGetApplicationId(call, result: result)
             break
         case "logEvent":
-            handleLogEvent(call, result: result)
-            break
+            do{
+            handleLogEvent(call, result: result)  
+            } catch <#pattern#> {
+                print(pattern)
+            }
+
+                break
         case "logPushNotificationOpen":
             handlePushNotificationOpen(call, result: result)
             break
